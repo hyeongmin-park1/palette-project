@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width,initial-scale=1"><!-- 모바일 스케일 지정-->
+    <meta name=description content="280 handpicked colors ready for COPY & PASTE"><!-- description-->
+    <link rel="shortcut icon" href="image/faviconV2.ico"><!--타이틀 아이콘(favicon)-->
+    <title>🎨 Flat UI Palette v1 | Flat UI Colors 🎨  280 handpicked colors ready for COPY & PASTE</title>
+    <meta property="og:title" content="Flat UI Colors 2 - 14 Color Palettes, 280 colors 🎨">
+    <meta property="og:description" content="280 handpicked colors ready for COPY & PASTE">
+    <meta property="og:image" content="image/share.png">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="fullScreen">
+        <div id="randomMessage">
+
+        </div>
+        <div id="colorValue">
+
+        </div>
+    </div>
+    <header>
+        <a href="https://flatuicolors.com/" class="back-button">
+          <span id="pointer">← </span>
+           Back
+        </a>
+        <div class="dropdown">
+          <input id="copyFormat" class="textBox" type="text" placeholder="Copy Format: HEX(#AA1923)" readonly>
+          
+          
+          <div class="options">        
+                <div onclick="show('Copy Format: HEX(#AA1923)')">HEX(#AA1923)</div>
+                <div onclick="show('Copy Format: HEX(AA1923)')">HEX(AA1923)</div>
+                <div onclick="show('Copy Format: RGB - (1,2,3)')">RGB - (1,2,3)</div>
+                <div onclick="show('Copy Format: RGBA - (1,2,3,0.4)')">RGBA - (1,2,3,0.4)</div>
+                <div onclick="location.href='https://flatuicolors.com/subscribe'">☝️ Want more colors?</div>
+                <div>👋 Feedback</div>
+          </div>
+        </div>
+        <span id="soundButton" onclick='change()'>Sound Off 🔇</span>
+        </a>
+    </header>
+    <div class="box"></div>
+    <footer>
+        Flat UI Palette v1 by Flat UI Colors
+    </footer>
+    <script src="js/header.js"></script>
+    <script src="js/body.js"></script>
+    
+    </body>
+</html>
