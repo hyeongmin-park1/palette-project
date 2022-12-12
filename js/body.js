@@ -82,7 +82,7 @@ function copy(content){
 const fetchColorBox = () => {
   let output = "";
   colorsMap.forEach(
-    ({ name, hex }, index) =>
+    ({ name, hex }) =>
       (output += `
               <div style="background-color: ${hex}" class="colorBox" onclick="copy('${hex}')">
                 <div class="copySign">COPY</div>
