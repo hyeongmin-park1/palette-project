@@ -95,3 +95,11 @@ const fetchColorBox = () => {
 };
 
 fetchColorBox();
+
+/* 
+const colorsMap = [];
+function fetch(url){
+  fetch(url)
+  .then( response => response.json())
+  .then( json => (colorsMap = colors))
+} */
