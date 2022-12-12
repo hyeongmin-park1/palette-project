@@ -82,7 +82,7 @@ function copy(content){
 const fetchColorBox = () => {
   let output = "";
   colorsMap.forEach(
-    ({ name, hex }) =>
+    ({ name, hex }, index) =>
       (output += `
               <div style="background-color: ${hex}" class="colorBox" onclick="copy('${hex}')">
                 <div class="copySign">COPY</div>
@@ -91,7 +91,20 @@ const fetchColorBox = () => {
               `)
   );
 
+  //   console.log("ddd", document);
+  //   //   document.querySelector("#copyButton")?.addEventListener("click", () => {
+  //   //     console.log("click");
+  //   //   });
   container.innerHTML = output;
 };
 
 fetchColorBox();
+
+
+
+/* document.querySelector(".colorBox").addEventListener("click", () => {
+  window.navigator.clipboard.writeText(colorName.textContent)
+});
+document.querySelector("#copyButton").addEventListener("mouseover", () => {
+  console.log("hover");
+});  */
