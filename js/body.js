@@ -20,7 +20,7 @@ const colorsMap = [
   { name: "PUMPKIN", hex: "#d35400" },
   { name: "POMEGRANATE", hex: "#c0392b" },
   { name: "SILVER", hex: "#bdc3c7" },
-  { name: "ASBESTOS", hex: "#7f8c8d" },
+  { name: "ASBESTOS", hex: "#7f8c8d" }
 ];
 
 const messages = [ 
@@ -33,7 +33,7 @@ const messages = [
 ];
 
 function hexToRgb(hex) {
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result ? {
     r: parseInt(result[1], 16),
     g: parseInt(result[2], 16),
@@ -82,7 +82,7 @@ function copy(content){
 const fetchColorBox = () => {
   let output = "";
   colorsMap.forEach(
-    ({ name, hex }, index) =>
+    ({ name, hex }) =>
       (output += `
               <div style="background-color: ${hex}" class="colorBox" onclick="copy('${hex}')">
                 <div class="copySign">COPY</div>
@@ -91,20 +91,7 @@ const fetchColorBox = () => {
               `)
   );
 
-  //   console.log("ddd", document);
-  //   //   document.querySelector("#copyButton")?.addEventListener("click", () => {
-  //   //     console.log("click");
-  //   //   });
   container.innerHTML = output;
 };
 
 fetchColorBox();
-
-
-
-/* document.querySelector(".colorBox").addEventListener("click", () => {
-  window.navigator.clipboard.writeText(colorName.textContent)
-});
-document.querySelector("#copyButton").addEventListener("mouseover", () => {
-  console.log("hover");
-});  */
